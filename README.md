@@ -1,69 +1,50 @@
-# CodeIgniter 4 Application Starter
+ 📦 SARPRAS CORE - Integrated Asset Management
 
-## What is CodeIgniter?
+[![PHP Version](https://img.shields.io/badge/php-%3E%3D%208.2-8892bf.svg?style=flat-square)](https://php.net)
+[![Framework](https://img.shields.io/badge/framework-CodeIgniter%204-EF4223?style=flat-square)](https://codeigniter.com)
+[![UI](https://img.shields.io/badge/ui-Bootstrap%205-7952b3?style=flat-square)](https://getbootstrap.com)
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+**SARPRAS CORE** is a modern web-based application designed to streamline the management of office supplies and assets. Featuring a real-time dashboard and QR-code integration, it provides an effortless experience for borrowing assets and requesting supplies.
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+---
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+## ✨ Key Features
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+-   **Adaptive Dashboard**: A sleek, high-contrast interface with **Real-time Clock** and **Live Activity Feed**.
+-   **Smart Dark Mode**: Native support for Dark/Light themes with automatic system detection and manual toggle.
+-   **QR-Code Scanner**: Integrated scanning system for quick asset borrowing using the device's camera.
+-   **Real-time Updates**: AJAX-powered transaction history that stays updated without page refreshes.
+-   **Mobile-First Design**: Optimized for both desktop and mobile use with a glassmorphism aesthetic.
 
-## Installation & updates
+---
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+## 🛠️ Built With
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+-   **Core:** [CodeIgniter 4.x](https://codeigniter.com)
+-   **Frontend:** Bootstrap 5, FontAwesome 6, and Plus Jakarta Sans Typography.
+-   **Libraries:** [Html5-QRCode](https://github.com/mebjas/html5-qrcode) for scanning capabilities.
+-   **Authentication:** Integrated Session-based Auth for secure access.
 
-## Setup
+---
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+## 🚀 Installation
 
-## Important Change with index.php
+1. **Clone the repository**
+   ```bash
+   git clone [https://github.com/yourusername/sarpras-core.git](https://github.com/yourusername/sarpras-core.git)
+   cd sarpras-core
+Install DependenciesBashcomposer install
+Environment SetupCopy env to .envSet your database credentials:Cuplikan kodedatabase.default.hostname = localhost
+database.default.database = your_db_name
+database.default.username = root
+database.default.password = 
+database.default.DBDriver = MySQLi
+Run Migrations (Optional)Bashphp spark migrate
+Launch ApplicationBashphp spark serve
+📸 PreviewLight Mode DashboardDark Mode Dashboard(Note: Replace these placeholders with your actual screenshots for maximum impact!)🔒 SecurityThis application implements security best practices:Public Folder Isolation: The index.php is located in the /public folder to prevent direct access to system files.Escaped Output: All data displayed uses esc() to prevent XSS attacks.CSRF Protection: Native CodeIgniter 4 security filters enabled.🤝 ContributingContributions, issues, and feature requests are welcome! Feel free to check the issues page.📝 LicenseDistributed under the MIT License. See LICENSE for more information.Developed with ❤️ by [Your Name]
+---
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
 
-**Please** read the user guide for a better explanation of how CI4 works!
 
-## Repository Management
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
-
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
-
-## Server Requirements
-
-PHP version 8.2 or higher is required, with the following extensions installed:
-
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-
-> [!WARNING]
-> - The end of life date for PHP 7.4 was November 28, 2022.
-> - The end of life date for PHP 8.0 was November 26, 2023.
-> - The end of life date for PHP 8.1 was December 31, 2025.
-> - If you are still using below PHP 8.2, you should upgrade immediately.
-> - The end of life date for PHP 8.2 will be December 31, 2026.
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
